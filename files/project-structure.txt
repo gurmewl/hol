@@ -1,0 +1,26 @@
+aphex-twin-website/
+│
+├── public/
+│   ├── images/         # Logos, artist photos, UI icons, cybersigil SVGs
+│   ├── audio/          # Track samples, sound effects
+│   ├── video/          # Music video clips, visualizer loops
+│
+├── src/
+│   ├── index.html      # Main HTML structure
+│   ├── styles/
+│   │   ├── main.css        # Core CSS (brutalism + cybersigilism + 2025 trends)
+│   │   └── themes.css      # Optional: dark/light modes, accent colors
+│   ├── js/
+│   │   ├── main.js         # Global interactivity, SPA routing logic
+│   │   ├── visualizer.js   # Web Audio API visualizer for tracks
+│   │   └── secrets.js      # Easter egg/secret page logic
+│   ├── components/
+│   │   ├── header.html     # Navigation/menu
+│   │   ├── footer.html     # Social/contact links
+│   │   ├── bio.html        # Biography section
+│   │   ├── discography.html# Discography grid/list
+│   │   ├── facts.html      # Funny facts/quirks
+│   │   └── media.html      # Photos, videos, audio players
+│
+├── README.md           # Project overview, setup, modification notes
+└── .gitignore          # Ignore build/output files

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neomorph 2025 | Digital Experience</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="fonts/ClashDisplay-Variable.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Primary Stylesheet -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="Experience the future of web design with our 2025 showcase">
+    <meta property="og:title" content="Neomorph 2025">
+    <meta property="og:description" content="Cutting-edge web design showcase featuring latest trends">
+    <meta property="og:image" content="images/og-image.jpg">
+    
+    <!-- Theme color for browser -->
+    <meta name="theme-color" content="#0A0A0B">
+</head>
+<body class="loading" data-theme="dark">
+    <!-- Page Loader -->
+    <div class="page-loader" aria-hidden="true">
+        <div class="loader-content">
+            <svg class="loader-icon" viewBox="0 0 50 50">
+                <circle class="loader-circle" cx="25" cy="25" r="20" fill="none" stroke-width="5"/>
+            </svg>
+            <span class="loader-text">Loading Experience</span>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="site-header" data-scroll-header>
+        <nav class="main-nav container">
+            <a href="/" class="logo" aria-label="Home">
+                <span class="logo-text">Neomorph</span>
+            </a>
+            
+            <button class="nav-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                <span class="toggle-line"></span>
+                <span class="toggle-line"></span>
+            </button>
+
+            <div class="nav-content" data-visible="false">
+                <ul class="nav-links">
+                    <li><a href="#work" class="nav-link" data-text="Work">Work</a></li>
+                    <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+                    <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+                </ul>
+
+                <div class="nav-footer">
+                    <time datetime="2025-06-14 20:30:47" class="time-display">
+                        14.06.2025 | 20:30:47
+                    </time>
+                    <span class="user-info">@gurmewl</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" data-scroll-section>
+        <div class="container hero-container">
+            <h1 class="hero-title" data-splitting>
+                Creating Digital
+                <span class="accent-text">Experiences</span>
+            </h1>
+            
+            <div class="hero-content">
+                <p class="hero-text">
+                    Exploring the intersection of design and technology
+                    through immersive web experiences.
+                </p>
+                
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary">
+                        View Work
+                        <svg class="btn-icon" viewBox="0 0 24 24">
+                            <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">Scroll to Explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Grid Section -->
+    <section id="work" class="work-section" data-scroll-section>
+        <div class="container">
+            <h2 class="section-title" data-splitting>Selected Work</h2>
+            
+            <div class="work-grid">
+                <!-- Work Item 1 -->
+                <article class="work-item" data-scroll data-scroll-speed="1">
+                    <a href="#" class="work-link">
+                        <div class="work-image-container">
+                            <img src="images/work-1.jpg" alt="Project One" class="work-image">
+                            <div class="work-overlay"></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Quantum Interface</h3>
+                            <p class="work-category">UI Design / Development</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Work Item 2 -->
+                <article class="work-item" data-scroll data-scroll-speed="1.2">
+                    <a href="#" class="work-link">
+                        <div class="work-image-container">
+                            <img src="images/work-2.jpg" alt="Project Two" class="work-image">
+                            <div class="work-overlay"></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Neural Network</h3>
+                            <p class="work-category">Interactive Experience</p>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- Work Item 3 -->
+                <article class="work-item" data-scroll data-scroll-speed="1.4">
+                    <a href="#" class="work-link">
+                        <div class="work-image-container">
+                            <img src="images/work-3.jpg" alt="Project Three" class="work-image">
+                            <div class="work-overlay"></div>
+                        </div>
+                        <div class="work-content">
+                            <h3 class="work-title">Cyber Identity</h3>
+                            <p class="work-category">Brand Design</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer" data-scroll-section>
+        <div class="container footer-container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Created with passion by @gurmewl
+                </p>
+                <p class="footer-copyright">
+                    © 2025 All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
