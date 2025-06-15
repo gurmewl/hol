@@ -1,0 +1,86 @@
+<!-- Update with more precise styling hooks and interactive elements -->
+<header id="site-header" class="neo-header" data-theme="dark">
+  <div class="glitch-container" data-glitch-intensity="medium">
+    <div class="glitch-overlay" aria-hidden="true">
+      <!-- Added multiple overlay layers for better glitch effect -->
+      <div class="glitch-layer"></div>
+      <div class="glitch-layer"></div>
+      <div class="glitch-layer"></div>
+    </div>
+    
+    <nav class="main-nav" role="navigation">
+      <a href="#home" class="nav-logo" aria-label="Aphex Twin - Return to Home">
+        <div class="logo-container" data-hover-effect="glitch">
+          <!-- Added data attributes for JavaScript hooks -->
+          <img src="../public/images/aphex-logo.svg" alt="Aphex Twin Logo" class="primary-logo" data-logo-state="primary" />
+          <img src="../public/images/aphex-logo.svg" alt="" class="ghost-logo" aria-hidden="true" data-logo-state="ghost" />
+        </div>
+      </a>
+      
+      <button class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <ul id="nav-menu" class="nav-links" data-state="closed">
+        <li><a href="#about" class="nav-link" data-text="About" data-section="about">About</a></li>
+        <li><a href="#discography" class="nav-link" data-text="Discography" data-section="discography">Discography</a></li>
+        <li><a href="#facts" class="nav-link" data-text="Weird_Stuff" data-section="facts">Weird_Stuff</a></li>
+        <li><a href="#media" class="nav-link" data-text="Media" data-section="media">Media</a></li>
+        <li class="secret-nav">
+          <a href="#secret" class="nav-link secret-link" aria-label="Secret Section" data-section="secret">
+            <span class="secret-icon">⌭</span>
+            <!-- Added hover effect container -->
+            <div class="hover-effect" aria-hidden="true"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Added progress indicator -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="progress-bar"></div>
+  </div>
+</header>
+
+<!-- Add associated JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.getElementById('site-header');
+  const menuToggle = header.querySelector('.menu-toggle');
+  const navMenu = header.querySelector('#nav-menu');
+  const progressBar = header.querySelector('.progress-bar');
+
+  // Mobile menu toggle
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isExpanded);
+    navMenu.dataset.state = isExpanded ? 'closed' : 'open';
+  });
+
+  // Scroll progress
+  window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    progressBar.style.width = scrolled + '%';
+  });
+
+  // Active link highlighting
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        document.querySelectorAll('.nav-link').forEach(link => {
+          link.classList.toggle('active', link.dataset.section === id);
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // Observe all sections
+  document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+});
+</script>

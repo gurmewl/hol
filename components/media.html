@@ -1,0 +1,70 @@
+<section id="media" class="media-section">
+  <h2 class="section-title" data-text="Media">Media</h2>
+  
+  <div class="media-container">
+    <div class="media-controls">
+      <div class="media-filters">
+        <button class="media-filter active" data-filter="all">All</button>
+        <button class="media-filter" data-filter="video">Videos</button>
+        <button class="media-filter" data-filter="photo">Photos</button>
+        <button class="media-filter" data-filter="audio">Audio</button>
+      </div>
+      
+      <div class="view-toggles">
+        <button class="view-toggle grid-view active" aria-label="Grid View">
+          <span class="toggle-icon">⊞</span>
+        </button>
+        <button class="view-toggle list-view" aria-label="List View">
+          <span class="toggle-icon">≡</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="media-grid">
+      <!-- Video Item -->
+      <article class="media-item" data-type="video">
+        <div class="media-wrapper">
+          <video poster="../public/images/come-to-daddy-thumb.jpg" controls>
+            <source src="../public/video/come-to-daddy-clip.mp4" type="video/mp4">
+            Your browser doesn't support video playback.
+          </video>
+          <div class="media-overlay">
+            <h3 class="media-title">Come to Daddy (Official Video)</h3>
+            <p class="media-date">1997</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Photo Item -->
+      <article class="media-item" data-type="photo">
+        <div class="media-wrapper">
+          <img src="../public/images/aphex-live.jpg" alt="Aphex Twin performing live" />
+          <div class="media-overlay">
+            <h3 class="media-title">Live Performance</h3>
+            <p class="media-date">2024</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Audio Item -->
+      <article class="media-item" data-type="audio">
+        <div class="media-wrapper audio-wrapper">
+          <div class="audio-visualization">
+            <canvas class="audio-canvas"></canvas>
+          </div>
+          <audio controls src="../public/audio/windowlicker.mp3"></audio>
+          <div class="media-overlay">
+            <h3 class="media-title">Windowlicker (Radio Edit)</h3>
+            <p class="media-date">1999</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="media-pagination">
+      <button class="pagination-btn prev" aria-label="Previous page">←</button>
+      <span class="page-indicator">1 / 3</span>
+      <button class="pagination-btn next" aria-label="Next page">→</button>
+    </div>
+  </div>
+</section>

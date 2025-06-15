@@ -1,0 +1,68 @@
+<section id="discography" class="discography-section">
+  <h2 class="section-title" data-text="Discography">Discography</h2>
+  
+  <div class="discography-container">
+    <div class="album-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="album">Albums</button>
+      <button class="filter-btn" data-filter="ep">EPs</button>
+      <button class="filter-btn" data-filter="single">Singles</button>
+    </div>
+
+    <div class="album-grid">
+      <!-- Selected Ambient Works 85-92 -->
+      <article class="album-card" data-type="album">
+        <div class="album-art-container">
+          <img src="../public/images/saw85-92.jpg" alt="Selected Ambient Works 85-92 Album Cover" class="album-art" />
+          <div class="album-overlay">
+            <button class="play-btn" aria-label="Play Selected Ambient Works 85-92">
+              <span class="play-icon">▶</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="album-info">
+          <h3 class="album-title">Selected Ambient Works 85-92</h3>
+          <p class="album-year">1992</p>
+          <div class="album-details">
+            <span class="album-label">Warp Records</span>
+            <span class="album-format">2×LP, Album</span>
+          </div>
+        </div>
+
+        <div class="album-player">
+          <audio src="../public/audio/xtal.mp3" controls></audio>
+          <canvas class="visualizer" data-audio-id="xtal"></canvas>
+        </div>
+      </article>
+
+      <!-- Come to Daddy -->
+      <article class="album-card" data-type="ep">
+        <div class="album-art-container">
+          <img src="../public/images/come-to-daddy.jpg" alt="Come to Daddy EP Cover" class="album-art" />
+          <div class="album-overlay">
+            <button class="play-btn" aria-label="Play Come to Daddy">
+              <span class="play-icon">▶</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="album-info">
+          <h3 class="album-title">Come to Daddy</h3>
+          <p class="album-year">1997</p>
+          <div class="album-details">
+            <span class="album-label">Warp Records</span>
+            <span class="album-format">EP</span>
+          </div>
+        </div>
+
+        <div class="album-player">
+          <audio src="../public/audio/come-to-daddy.mp3" controls></audio>
+          <canvas class="visualizer" data-audio-id="ctd"></canvas>
+        </div>
+      </article>
+
+      <!-- Add more album-card elements as needed -->
+    </div>
+  </div>
+</section>
